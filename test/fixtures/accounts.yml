@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  amount     :float
+#  currency   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ammount: 1.5
+  currency: MyString
+
+two:
+  name: MyString
+  ammount: 1.5
+  currency: MyString

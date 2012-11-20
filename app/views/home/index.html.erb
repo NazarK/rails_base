@@ -1,0 +1,18 @@
+<h1>Coinkeeper</h1>
+
+
+<table>
+<% total = 0 %>
+<% Account.all.each do |acc| %>
+<% total += acc.cur_balance("usd") %>
+<tr>
+	<td><%= acc.name %><td><%= "%0.1f" % acc.cur_balance %><td><%= acc.currency %><td><%= "%0.1f" % acc.cur_balance("usd")%><td>usd
+
+<% end %>
+</table>
+<br>
+
+TOTAL: <%= total %> usd<br>
+
+
+<a href=/home/add>Add Transaction</a>

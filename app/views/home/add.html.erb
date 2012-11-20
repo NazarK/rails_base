@@ -1,0 +1,8 @@
+<form method=post>
+<input  type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+From account: <%=  select("transaction", "from_account_id", Account.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })%><br>
+To account: <%=  select("transaction", "from_account_id", Account.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })%><br>
+Amount: <input name=transaction[amount]><br>
+Currency: <input name=transaction[currency]><br>
+<input type=submit name=submit value='Submit'>
+</form>
