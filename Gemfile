@@ -11,6 +11,7 @@ end
 
 group :production do
   gem 'mysql'
+  gem 'pg'
 end
 
 gem 'devise', '1.3.4'
