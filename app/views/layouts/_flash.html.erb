@@ -1,0 +1,18 @@
+<%= uses "flash.css"%>
+<% flash=flash() %>
+<% flash.each do |key, msg| %>
+  <div class='flash <%= key %>'>
+    <p><%= msg %></p>
+  </div>
+<% end %>
+
+<% if flash %>
+<script>
+$(function() {
+  setTimeout(function() {
+    $(".flash").fadeOut();
+  },6000);
+
+});
+</script>
+<% end %>

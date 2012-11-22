@@ -1,0 +1,33 @@
+.flash {
+  border-radius: 3px;
+  padding:10px 15px;
+  margin-top: 10px;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+
+}
+
+.flash.message {
+  color: #06a;
+  background: #aef;
+}
+
+.flash.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+}
+
+.flash.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+}
+
+.flash.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.flash.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
