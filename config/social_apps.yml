@@ -1,0 +1,16 @@
+development:
+  facebook:
+    key: 256657104433591
+    secret: 60213eca013c51dae34bad067a7893b3
+  twitter:
+    key: KDYxIebQPIt2Ew8FI46VWA
+    secret: QU6ILppqihJTh63CPg3JaqGcLTCJDrqxQ8k6cfclU0
+
+
+production:
+  facebook:
+    key: 347129882026494
+    secret: 979c23ad5e88fcb3d356a43044346a4b
+  twitter:
+    key: KDYxIebQPIt2Ew8FI46VWA
+    secret: QU6ILppqihJTh63CPg3JaqGcLTCJDrqxQ8k6cfclU0

@@ -14,7 +14,13 @@ group :production do
   gem 'pg'
 end
 
-gem 'devise', '1.3.4'
+gem 'devise', '1.4.7'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-openid'
+gem 'omniauth'
+gem 'oa-core'
+
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'
 gem 'fastercsv'
 gem 'jquery-rails'

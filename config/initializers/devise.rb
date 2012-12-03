@@ -1,6 +1,15 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
+require 'openid/store/filesystem'
 Devise.setup do |config|
+  require 'omniauth-facebook'
+  require 'omniauth-twitter'
+  require 'omniauth-openid'
+  social_apps = YAML::load(File.open("#{::Rails.root}/config/social_apps.yml"))
+  config.omniauth :facebook, social_apps[Rails.env]["facebook"]["key"], social_apps[Rails.env]["facebook"]["secret"]
+  config.omniauth :twitter, social_apps[Rails.env]["twitter"]["key"], social_apps[Rails.env]["twitter"]["secret"]
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
@@ -191,4 +200,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+  config.sign_out_via = [:delete,:get]
+
 end
